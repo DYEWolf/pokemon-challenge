@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { SuicuneRoutingModule } from './suicune-routing.module';
 import { SuicuneComponent } from './page/suicune.component';
+import { SharedModule } from 'src/app/shared.module';
 
 @NgModule({
   declarations: [SuicuneComponent],
-  imports: [CommonModule, SuicuneRoutingModule],
+  imports: [CommonModule, SuicuneRoutingModule, SharedModule],
 })
 export class SuicuneModule {}

@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PokemonInfoComponent } from './pokemon-info/pokemon-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from './shared.module';
 
 @NgModule({
-  declarations: [AppComponent, PokemonInfoComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [PokemonInfoComponent],
 })
 export class AppModule {}

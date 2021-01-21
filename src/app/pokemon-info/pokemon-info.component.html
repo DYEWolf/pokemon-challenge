@@ -1,10 +1,36 @@
 <div class="card" style="width: 18rem">
+  <img [src]="pokemon.sprites.front_default" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
+    <h3 class="card-title">{{ pokemon.name }}</h3>
+    <div class="flex-display">
+      <p class="property-label">Hp:</p>
+      <p>{{ pokemon.stats[0].base_stat }}</p>
+    </div>
+    <div class="flex-display">
+      <p class="property-label">Atk:</p>
+      <p>{{ pokemon.stats[1].base_stat }}</p>
+    </div>
+    <div class="flex-display">
+      <p class="property-label">Def:</p>
+      <p>{{ pokemon.stats[2].base_stat }}</p>
+    </div>
+    <div class="flex-display">
+      <p class="property-label">Sp.Atk:</p>
+      <p>{{ pokemon.stats[3].base_stat }}</p>
+    </div>
+    <div class="flex-display">
+      <p class="property-label">Sp.Def:</p>
+      <p>{{ pokemon.stats[4].base_stat }}</p>
+    </div>
+    <div class="flex-display">
+      <p class="property-label">Speed:</p>
+      <p>{{ pokemon.stats[5].base_stat }}</p>
+    </div>
+
+    <div class="flex-display">
+      <p class="property-label">Type(s):</p>
+      <p *ngFor="let type of pokemon.types">&nbsp;{{ type.type.name }}&nbsp;</p>
+    </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>

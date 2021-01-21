@@ -8,12 +8,15 @@ import { PokemonService } from 'src/app/pokemon.service';
   styleUrls: ['./dragonite.component.css'],
 })
 export class DragoniteComponent implements OnInit {
+  pokemonData;
+
   constructor(private router: Router, private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     const pokemon = this.router.url.split('/')[1];
     this.pokemonService.getPokemon(pokemon).subscribe((res) => {
       console.log(res);
+      this.pokemonData = res;
     });
   }
 }
