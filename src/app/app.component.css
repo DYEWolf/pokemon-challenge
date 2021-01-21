@@ -1,0 +1,11 @@
+.pokemon-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 750px) {
+  .pokemon-logo {
+    width: 90%;
+  }
+}

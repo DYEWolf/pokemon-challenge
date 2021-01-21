@@ -9,6 +9,7 @@ import { PokemonService } from 'src/app/pokemon.service';
 })
 export class SuicuneComponent implements OnInit {
   pokemonData;
+  pokemonLocations;
 
   constructor(private router: Router, private pokemonService: PokemonService) {}
 
@@ -17,6 +18,12 @@ export class SuicuneComponent implements OnInit {
     this.pokemonService.getPokemon(pokemon).subscribe((res) => {
       console.log(res);
       this.pokemonData = res;
+      this.pokemonService
+        .getPokemonLocations(this.pokemonData.id)
+        .subscribe((res) => {
+          this.pokemonLocations = res;
+          console.log(this.pokemonLocations);
+        });
     });
   }
 }

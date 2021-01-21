@@ -1,3 +1,22 @@
 .property-label {
   font-weight: bold;
 }
+
+.pokemon-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.movements-class {
+  flex-wrap: wrap;
+}

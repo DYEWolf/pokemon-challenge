@@ -12,4 +12,8 @@ export class PokemonService {
   getPokemon(pokemon) {
     return this.http.get(`${this.BASE_URL}pokemon/${pokemon}`);
   }
+
+  getPokemonLocations(id) {
+    return this.http.get(`${this.BASE_URL}pokemon/${id}/encounters`);
+  }
 }

@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PokemonInfoComponent implements OnInit {
   @Input() pokemon;
-
+  @Input() locations;
   constructor() {}
 
   ngOnInit(): void {}
