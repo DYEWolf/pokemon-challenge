@@ -16,13 +16,11 @@ export class SuicuneComponent implements OnInit {
   ngOnInit(): void {
     const pokemon = this.router.url.split('/')[1];
     this.pokemonService.getPokemon(pokemon).subscribe((res) => {
-      console.log(res);
       this.pokemonData = res;
       this.pokemonService
         .getPokemonLocations(this.pokemonData.id)
         .subscribe((res) => {
           this.pokemonLocations = res;
-          console.log(this.pokemonLocations);
         });
     });
   }

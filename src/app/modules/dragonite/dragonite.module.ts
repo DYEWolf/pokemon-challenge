@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DragoniteRoutingModule } from './dragonite-routing.module';
 import { DragoniteComponent } from './page/dragonite.component';
-import { SharedModule } from 'src/app/shared.module';
+import { SharedModule } from 'src/app/modules/shared.module';
 
 @NgModule({
   declarations: [DragoniteComponent],
