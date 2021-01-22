@@ -4,6 +4,21 @@
   margin-right: auto;
 }
 
+.content-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.favorite-container {
+}
+
+h2 {
+  background-color: white;
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: 0 0 10px black;
+}
+
 @media (max-width: 750px) {
   .pokemon-logo {
     width: 90%;

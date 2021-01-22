@@ -32,6 +32,13 @@
     <button type="button" class="btn btn-primary" (click)="hideInformation()">
       {{ cardStatus }}
     </button>
-    <button type="button" class="btn btn-success">Add to Favorite</button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="addTofavorite()"
+      [disabled]="addedToFavorites"
+    >
+      {{ buttonFavorite }}
+    </button>
   </div>
 </div>

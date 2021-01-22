@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let favorites of favoritesArray">
+      <td>{{ favorites.id }}</td>
+      <td>{{ favorites.name }}</td>
+    </tr>
+  </tbody>
+  <tbody></tbody>
+</table>

@@ -9,9 +9,15 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './modules/shared.module';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
-  declarations: [AppComponent, ErrorPageComponent, SearchComponent],
+  declarations: [
+    AppComponent,
+    ErrorPageComponent,
+    SearchComponent,
+    FavoritesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

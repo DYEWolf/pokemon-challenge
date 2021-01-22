@@ -6,10 +6,16 @@
   />
   <router-outlet></router-outlet>
   <app-search (searchPokemon)="onSearchPokemon($event)"></app-search>
-  <app-pokemon-info
-    [pokemon]="pokemon"
-    [locations]="pokemonLocations"
-    [hideInfo]="true"
-    *ngIf="pokemon"
-  ></app-pokemon-info>
+  <div>
+    <app-pokemon-info
+      [pokemon]="pokemon"
+      [locations]="pokemonLocations"
+      [hideInfo]="true"
+      *ngIf="pokemon"
+    ></app-pokemon-info>
+    <div *ngIf="favoritesList.length > 0">
+      <h2>Favorites List</h2>
+      <app-favorites [favoritesArray]="favoritesList"></app-favorites>
+    </div>
+  </div>
 </div>
