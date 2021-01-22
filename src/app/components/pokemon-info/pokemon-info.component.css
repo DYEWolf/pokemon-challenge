@@ -6,6 +6,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -19,4 +20,8 @@ img {
 
 .movements-class {
   flex-wrap: wrap;
+}
+
+.btn-success {
+  margin-left: 20px;
 }

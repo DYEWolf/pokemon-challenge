@@ -1,0 +1,18 @@
+<div class="input-group mb-3 input-search">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search for a Pokemon!"
+    aria-label="Input for pokemon search"
+    aria-describedby="button-addon"
+    [(ngModel)]="pokemon"
+  />
+  <button
+    class="btn btn-primary"
+    type="button"
+    id="button-addon"
+    (click)="search()"
+  >
+    Search
+  </button>
+</div>

@@ -9,16 +9,25 @@ export class PokemonInfoComponent implements OnInit {
   @Input() pokemon;
   @Input() locations;
   @Input() hideInfo;
+  cardStatus;
   constructor() {}
 
-  ngOnInit(): void {}
-
-  hideInformation(event) {
-    this.hideInfo = !this.hideInfo;
-    if (event.srcElement.innerText === 'Hide') {
-      event.srcElement.innerText = 'Show';
+  ngOnInit(): void {
+    console.log('here');
+    console.log(this.hideInfo);
+    if (this.hideInfo === true) {
+      this.cardStatus = 'Show';
     } else {
-      event.srcElement.innerText = 'Hide';
+      this.cardStatus = 'Hide';
+    }
+  }
+
+  hideInformation() {
+    this.hideInfo = !this.hideInfo;
+    if (this.cardStatus == 'Hide') {
+      this.cardStatus = 'Show';
+    } else if (this.cardStatus == 'Show') {
+      this.cardStatus = 'Hide';
     }
   }
 }

@@ -5,16 +5,11 @@
     class="pokemon-logo"
   />
   <router-outlet></router-outlet>
-  <!-- <div class="input-group mb-3">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Search a Pokemon!"
-      aria-label="Input for pokemon search"
-      aria-describedby="button-addon"
-    />
-    <button class="btn btn-primary" type="button" id="button-addon">
-      Button
-    </button>
-  </div> -->
+  <app-search (searchPokemon)="onSearchPokemon($event)"></app-search>
+  <app-pokemon-info
+    [pokemon]="pokemon"
+    [locations]="pokemonLocations"
+    [hideInfo]="true"
+    *ngIf="pokemon"
+  ></app-pokemon-info>
 </div>

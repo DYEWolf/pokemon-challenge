@@ -29,12 +29,9 @@
         <p *ngFor="let movement of pokemon.moves">{{ movement.move.name }},</p>
       </div>
     </div>
-    <button
-      type="button"
-      class="btn btn-primary"
-      (click)="hideInformation($event)"
-    >
-      Hide
+    <button type="button" class="btn btn-primary" (click)="hideInformation()">
+      {{ cardStatus }}
     </button>
+    <button type="button" class="btn btn-success">Add to Favorite</button>
   </div>
 </div>
