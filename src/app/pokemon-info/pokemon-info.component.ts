@@ -8,7 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonInfoComponent implements OnInit {
   @Input() pokemon;
   @Input() locations;
+  @Input() hideInfo;
   constructor() {}
 
   ngOnInit(): void {}
+
+  hideInformation(event) {
+    this.hideInfo = !this.hideInfo;
+    if (event.srcElement.innerText === 'Hide') {
+      event.srcElement.innerText = 'Show';
+    } else {
+      event.srcElement.innerText = 'Hide';
+    }
+  }
 }

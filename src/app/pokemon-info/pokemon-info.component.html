@@ -7,23 +7,34 @@
   <div class="card-body">
     <h3 class="card-title">{{ pokemon.name }}</h3>
     <hr />
-    <div class="flex-display" *ngFor="let stat of pokemon.stats">
-      <p class="property-label">{{ stat.stat.name }}:</p>
-      <p>{{ stat.base_stat }}</p>
+    <div *ngIf="!hideInfo">
+      <div class="flex-display" *ngFor="let stat of pokemon.stats">
+        <p class="property-label">{{ stat.stat.name }}:</p>
+        <p>{{ stat.base_stat }}</p>
+      </div>
+      <div class="flex-display" *ngIf="locations">
+        <p class="property-label">Locations:</p>
+        <p *ngFor="let location of locations">
+          &nbsp;{{ location.location_area.name }}&nbsp;
+        </p>
+      </div>
+      <div class="flex-display">
+        <p class="property-label">Type(s):</p>
+        <p *ngFor="let type of pokemon.types">
+          &nbsp;{{ type.type.name }}&nbsp;
+        </p>
+      </div>
+      <div class="flex-display movements-class">
+        <p class="property-label">Movements:</p>
+        <p *ngFor="let movement of pokemon.moves">{{ movement.move.name }},</p>
+      </div>
     </div>
-    <div class="flex-display" *ngIf="locations">
-      <p class="property-label">Locations:</p>
-      <p *ngFor="let location of locations">
-        &nbsp;{{ location.location_area.name }}&nbsp;
-      </p>
-    </div>
-    <div class="flex-display">
-      <p class="property-label">Type(s):</p>
-      <p *ngFor="let type of pokemon.types">&nbsp;{{ type.type.name }}&nbsp;</p>
-    </div>
-    <div class="flex-display movements-class">
-      <p class="property-label">Movements:</p>
-      <p *ngFor="let movement of pokemon.moves">{{ movement.move.name }},</p>
-    </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="hideInformation($event)"
+    >
+      Hide
+    </button>
   </div>
 </div>
